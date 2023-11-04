@@ -1,0 +1,9 @@
+1. Stylesheets are applied in cascading order in the order they are loaded in HTML.
+2. If possible it is better to avoid in-line (style as tag's attribute) stylesheets.
+	External stylesheets are preferred as they keep the css code separated from other things.
+3. If something declared wrong - it is just ignored (i.e. 'colour' instead of 'color'). 
+	If one wants to validate the css style file, one can use some external sites / extensions.
+	(https://jigsaw.w3.org/css-validator/)
+
+
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
