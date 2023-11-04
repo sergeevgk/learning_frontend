@@ -1,0 +1,43 @@
+1. If inside the css file selectors are written one right after another e.g. h1 h2 { ... } without a comma, then this selector will look for <h2> element nested (inside) the <h1> elements.
+The proximity of an element to other elements that are referenced in a given selector has no impact on specificity.
+
+body h1 {
+  color: green;
+}
+
+html h1 {
+  color: purple;
+}
+
+this will use the last one (color: purple) just because it is declared later.
+
+2. Intead of using nested element selectors, it may be a better idea to introduce a class for some certain purpose.
+It will be more specific and clear for other people and will make future changes easier and flexier.
+
+3. Rules are applied in "from top to down" order but more specific rules (selectors) override less specific ones.
+
+4. Some settings are inherited from parent elements (body) to the child elements (p, etc.).
+Typography settings are inheritedd in most cases (font, align), but it should become more clear with experience.
+
+5. If one wants to inherit some settings or settings groups like "font", it can be done like this:
+
+button, input, textarea, select {
+	font: inherit;
+}
+
+this makes the elements matching those selectors to inherit the "font" setting from their parent.
+
+6. If inheritance should go to all elements, 'html' can be used as the topmost element.
+In other cases it is good to use 'body' or 'main'.
+
+7. There are some notations which could be applied to settings like "!important". 
+p {
+	color: purple!important;
+}
+
+It makes the marked setting to override other rules.
+This should be avoided unless one knows what he is doing well enough.
+
+Useful Links:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+Specificity Calculator : https://specificity.keegan.st/
