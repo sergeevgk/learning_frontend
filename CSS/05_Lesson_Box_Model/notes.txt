@@ -1,0 +1,30 @@
+Box Model:
+
+Content -> padding -> border -> outline & margin
+
+
+1. "CSS reset"
+```
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+```
+This very basic wildcard selector will set some default values for all HTML elements.
+(It resets the browser defaults).
+
+content-box instructs browser to use sizes for the content itself, not including the padding and margin.
+border-box instructs to count padding and border size together with content size.
+
+
+2. Elements which are not part of box: 
+	- Margin is outside the box, so it is not included in box model equation (size calculations). 
+	  Style settings same as padding. 
+	- Outline is outside the box (in most cases), so it is not included in box model equation. 
+	  Style settings same as border.
+	  It can be "inside" the border if outline-offset is negative. It does not take box space in any case.
+	
+
+3. Margin can be used with "auto" setting for left & right margin (not top and bottom).
+With this setting it makes the margin equal and put the element in the middle (center horizontally).

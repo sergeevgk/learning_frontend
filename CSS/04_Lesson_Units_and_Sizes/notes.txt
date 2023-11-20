@@ -1,0 +1,54 @@
+1. Absolute length units.
+
+	Px (pixels) is the standard as stated by the MDN.
+
+	NB: when user changes 'appearance / font' settings in his browser, this does not affect the settings in absolute units.
+	! It is not a good choice to always display text in absolute units without any relation to the browser settings !
+	For text other options are better.
+
+	Absolute values are good for borders, etc.
+
+
+2. Numbers, lengths and percentages
+
+	- percentages:
+	represents a fraction of some other value. Always related to some quantity.
+
+	The percent represents a fraction of the same value of parent's element.
+
+	Commonly used to set the sizes of elements in relation to the page size (width, height).
+
+3.Relative length units
+
+- rem: 
+	Font size of the **root** element. 
+	If it is not set up explicitly (in html tag font settings), then it is set by default by browser.
+	In this case the font-size is not dependent of its parent element.
+
+- em:
+	This is related to the parent element which could also look to its parent, etc.
+	This may cause amplification of size when introduced font-size somewhere in the parent between the element and the root.
+
+	When em is used inside the element where font-size is present, like:
+
+	h1 {
+	border: 2px dashed red;
+	width: 50%;
+	font-size: 3rem;
+	padding: 0.5em;
+	}
+
+	then the padding's em is dependent on font-size also, so the padding becomes larger.
+	Also could be used for a button's margin / padding.
+
+
+- ch:
+	Character's size. It is the measurement of '0' element in the font.
+
+
+- vw:
+	viewport width = 1% of the viewport's width.
+	Most of the time percentage gives the same result.
+
+- vh:
+	viewport height = 1% of the viewport's height.
