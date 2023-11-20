@@ -1,0 +1,18 @@
+|| Typography is the way that text is arranged and presented.
+
+1. Font settings
+Font settings are not inherited in all elements.
+For example, form label inherits the parent's settings, but form Placeholder and Button text do not inherit those settings by default.
+It can be fixed with
+```
+input, button {
+	font: inherit;
+}
+```
+
+2. text-... settings:
+
+Text indentation is good example of using the 'em' elements as it depends on the parent's text size.
+text-indent: 2em;
+
+3. font-... settings
