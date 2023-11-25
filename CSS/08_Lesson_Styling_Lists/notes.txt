@@ -1,0 +1,70 @@
+1. Lists and text
+
+text-center might not work correctly there.
+Consider using list-style-position to move text together with list "points".
+```
+ul {
+ list-style-position: inside; 
+}
+ ```
+	
+line-height may be used for setting spacing between list items.
+
+list-style-image can be used for images instead of symbols.
+
+
+Shorthand for setting all properties:
+```
+list-style: square url('../images/checkmark.png') inside;
+```
+Square in this case is a default 'fallback' for marker if image not found. 
+
+2. 
+- 'li' selector is more specific than lists 'ul' / 'ol'.
+
+- 'ul li' - selectors can be combined for more specificity.
+
+- 'ul li:nth-child(2)' is for changing the specific child in list.
+
+- 'ul li:nth-child(even|odd)' is for odd / even elements.
+
+
+3. Markers 
+
+- Markers can be selected by selector '::marker':
+```
+::marker {
+	color: black;
+}
+```
+
+- Also we can add ul / ol* before this selector to select ordered / unordered markers only.
+		* and li too but this does not help as markers are only in li elements. 
+
+
+- Text content for markers can be set in content setting together with text style:
+
+```
+ul ::marker {
+  color: green;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "Only 5$ >> "
+}
+```
+
+4. Html element list can have attribute "value".
+<li value="26">bla bla</li>
+When it comes to ordered list, the next value is calculated according to list setting from this explicitly set value.
+
+Example, this list:
+ <ol start="13" reversed>
+	<li>Step One</li>
+	<li value="26">Step Two</li>
+	<li>Step Three</li>
+</ol>
+
+results in:
+	m. Step One
+	z. Step Two
+	y. Step Three
