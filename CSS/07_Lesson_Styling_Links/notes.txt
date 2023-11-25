@@ -1,0 +1,31 @@
+1. There are "pseudo-classes" which can be selected in CSS:
+
+this is main selector for anchors
+```
+a {
+
+}
+```
+
+and this is pseudo-class selector for "visited" anchors
+```
+a:visited {
+
+ }
+```
+
+selectors for pseudo-classes can be combined just like the normal ones
+
+```
+a:hover, a:focus {
+	color: hsl(189, 44%, 49%, 0.8);
+	background: gold;	
+}
+```
+
+Pseudo-class selectors have higher specificity than normal selectors. 
+Among the pseudo-class selectors it is very important to write them in right "cascade" order.
+For anchors it is: visited -> hover, focused -> active - to show all style chages as expected by user. 
+
+2. It is good to not change the color of hovered link drastically.
+The good choice is to slightly change opacity or choose a bit different color (hue) in HSL.
