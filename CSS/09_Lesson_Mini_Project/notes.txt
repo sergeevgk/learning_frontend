@@ -1,0 +1,12 @@
+1. Display block
+
+Normally anchor tag is inline element but here it is changed to block-element.
+Block elements have 100% width (of parent).
+For acnhor tags this means that the whole block is an anchor (clickable) with all style setting applied.
+
+below is an example for a list of anchors
+```
+li a {
+	display: block;
+}
+```
