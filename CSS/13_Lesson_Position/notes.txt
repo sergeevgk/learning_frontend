@@ -1,0 +1,24 @@
+Position
+
+1. Default position of all elements is 'static'.
+
+2. 'absolute' positioning needs a relative element. 
+	If it doesn't have an ancestor element that is positioned relative, then it takes the original (initial) boundry. 
+	The closest ancestor is chosen if more than one are relative.
+
+3. 'relative' works in both directions - from child to parent and otherwise.
+	If one element is relative, it is not necessary to define 'position: relative' on the other element. 
+
+4. 'fixed' position is really fixed: it does not change on scrolling!
+	The element stays at the same place on screen for all the time.
+
+	! position: fixed; is pulling the element out of normal flow.
+	The element is no more the block-level element, and becomes inline one.
+
+
+5. 'sticky' sticks to the parent container on the position set in its settings. 
+	It moves until it reaches the end of container (and goes away with content).
+
+6. z-index (order in which the elements appear on the screen)
+	Initially it relates on the order of elements in the HTML file - the last is the topmost.
+	Default value is 0. 
