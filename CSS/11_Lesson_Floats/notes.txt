@@ -1,0 +1,48 @@
+Float
+
+1. Basic info
+Float elements are not in the normal flow.
+If some text wraps float elements
+
+-----
+flo  |<p>like this</p>
+ a   |
+  t  |
+-----
+
+then applying 
+```
+p {
+	margin-left: N px;
+}
+```
+will do nothing. 'margin-right' should be applied to the float block.
+
+
+2. Containers for float elements
+
+Sometimes we want to wrap the float element and text around it in one container for styling / some convenient usage. 
+
+```
+.left {
+  float: left;
+  margin-right: 1rem;
+}
+```
+container for <div> which is block element with float behaviour and <p> block element:
+
+<section> 
+	<div class="block left">Float</div>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptate quam adipisci consequuntur ratione id earum soluta doloremque cum itaque.</p>
+</section>
+
+There are two ways to instruct the container to 'grow' and 'catch' the float element inside it.
+
+- overflow: auto;
+	legacy solution.
+
+- display: flow-root;
+	recommended solution.
+
+
+Consider using flex and flex-grid also.
