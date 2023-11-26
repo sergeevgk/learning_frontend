@@ -1,0 +1,22 @@
+This is about 'display' setting of element. Possible values are: block, inline, inline-block (but not limited to).
+
+1. Block-level elements and inline-level elements
+
+Block-level elements take 100% of available for them width.
+Block-level elements stack on top of each other because of this and always create a new line (line-break).
+
+Inline-level elements (blocks) use only content width (including padding) for them.
+They do not depend on 'top' and 'bottom' margin (it doesn't change anything) and 'height'.
+The padding can be applied but it does not respects other elements and simply overlap them.
+
+2. inline-block:
+
+Compared to inline:
+- inline-block allows to set a width and height on the element;
+- also, top and bottom margins are respected;
+- padding respects top and bottom of block (block increases its size).
+
+Compared to block:
+- Does not add a line-break after the element, so the element can sit next to other elements.
+
+This can be used to create a horizontal list instead of vertical. 
