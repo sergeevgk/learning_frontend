@@ -1,0 +1,58 @@
+Flex container:
+
+This applies to elements where 'display: flex' is applied.
+These elements are considered 'flex' elements and their behaviour changes.
+
+1. Horizontal and vertical layout settings
+
+- Horizontal alignment
+	'justify-content': 
+	flex-start: default (left alignment when in row), 
+	flex-end: right alignment when in row,
+	center: center alignment,
+	space-around: same space between items, some space around,
+	space-between: same space between items, no space around,
+	space-evenly: same space between and around (at the beginning and in the end) items.
+
+- Vertical alignment
+'align-items': flex-start, flex-end, center.
+	There are no space-... options because there is only 1 item at a time in each 'column'.
+	This applies only to the whole row, and aigns it to the start, end or center.
+
+
+
+2. Direction of sequence
+'flex-direction': row, row-reverse, column, column-reverse
+	Changes the direction [and order if -reverse] of items. Like transponse of matrix.
+
+3. Wrap
+By default, flexbox row is a row of boxes. 
+It does not wrap when changing size of window - it simply overgrows the container and don't stay inside the page.
+
+'flex-wrap': wrap makes them wrapping on the overflow of container.
+
+
+4. Flex-low =  flex-direction + flex-wrap
+'flex-flow: row wrap;' as an example.
+
+5. Aligning of content (like rows on wrapping):
+	'align-content': flex-start, flex-end, center, space-between, space-around, space-evenly.
+
+
+Flex items (elements inside flex-container):
+
+1. Flex changing of size
+
+'flex-basis' - the base size for other flex items setting
+
+'flex-grow', 'flex-shrink': koefficient with default = 1. 
+	Determines with which rate the item should increase / decrease its size among other flex items.
+
+Shorthand for all of those:
+'flex': grow shrink basis
+	ex. 'flex': 1 2 100px
+
+2. Order
+Changes the order (more like priority) of particular element in the sequence.
+Default: 0, values from -99 to 99.
+Applies after 'flex-direction' of the flex container.
