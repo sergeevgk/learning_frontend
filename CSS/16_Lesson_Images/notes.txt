@@ -1,0 +1,23 @@
+Images
+
+
+1. Width and height attributes of HTML element <image>
+They are not used as actual width and height, you would rather want to set actual ones in CSS file.
+They are fallback ones and tell browser to reserve this space in any case, i.e. when CSS files failes to load.
+
+2. Images are not block-level elements - they are inline-level elements.
+We often do not want this behavior - it makes an element to have space around it and behave not as expected.
+
+
+3. Images can be combined (notice transparenty).
+'background' setting can contain each of combined images' settings, but in the order (1st image settings, 2nd image settings)
+like this:
+  background: repeat-y right center url('../img/bubbles.png'), no-repeat center linear-gradient(to left,steelblue, rgb(190, 118, 190), white);
+  background-size: 25%, auto;
+
+  It can contain background-size also, but sometimes it is put  after common settings.
+
+4. Some browsers do not support some functions as-is.
+There is a site to check compatibility: caniuse.com
+For some settings -webkit- is needed.
+i.e. -webkit-background-clip: text;
