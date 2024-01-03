@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8" />
+	<script
+	  src="https://unpkg.com/react@17/umd/react.development.js"
+	  crossorigin
+	></script>
+	<script
+	  src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+	  crossorigin
+	></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<title>React ⚛️</title>
+  </head>
+  <body>
+	<div id="root"></div>
+
+	<!-- babel will transform all text/babel elements. 
+		That's not the preferred way to transform during the browser parses HTML. -->
+	<script type="text/babel">
+	  	// JSX way to create elements (allows to do this dynamically)
+		let calendar = "📅";
+		let alarm = "⏰";
+		let bike = "🚴‍♀️";
+		let home = "🏠";
+		let beer = "🍺";
+		let enjoy = "🥳";
+		let rest = "😴";
+
+		let ul = 
+		  <ul>
+			<li>{alarm} Maandag</li>
+			<li>{calendar} Dinsdag</li>
+			<li>{bike} Woensdag</li>
+			<li>{home} Donderdag</li>
+			<li>{beer} Vrijdag</li>
+			<li>{enjoy} Zaterdag</li>
+			<li>{rest} Zondag</li>
+		  </ul>
+
+	  ReactDOM.render(
+		ul,
+		document.getElementById("root")
+	  );
+	</script>
+  </body>
+</html>
